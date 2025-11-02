@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      /* ---------- General Reset ---------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* ---------- Body ---------- */
+      body {
+        background: #f9fafc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* ---------- Header ---------- */
+      header {
+        background: linear-gradient(135deg, #007bff, #6c63ff);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      header .profilephoto img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 4px solid white;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      header h2 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      /* ---------- Card Layout ---------- */
+      .card {
+        background: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #444;
+        position: relative;
+      }
+
+      .card-title span {
+        border-bottom: 3px solid #6c63ff;
+        padding-bottom: 3px;
+      }
+
+      /* ---------- About Me ---------- */
+      .me p {
+        text-align: center;
+        color: #555;
+        font-size: 1rem;
+      }
+
+      /* ---------- Skills ---------- */
+      .skills-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .skill-item {
+        background: #6c63ff;
+        color: white;
+        padding: 0.7rem 1.2rem;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .skill-item:hover {
+        background: #5548d2;
+      }
+
+      /* ---------- Projects ---------- */
+      .project-main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .project-items {
+        background: #f3f3ff;
+        border-radius: 10px;
+        padding: 1rem;
+        transition: 0.3s, transform 0.3s;
+      }
+
+      .project-items:hover {
+        background: #e9e8ff;
+        transform: translateY(-3px);
+      }
+
+      .project-items h4 {
+        color: #007bff;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-items a {
+        text-decoration: none;
+      }
+
+      .project-des p {
+        color: #555;
+        font-size: 0.9rem;
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        background: #222;
+        color: #ddd;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        margin-top: 2rem;
+      }
+
+      footer a {
+        color: #6c63ff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      footer a:hover {
+        color: #9f9cff;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        .card {
+          margin: 1rem;
+          padding: 1rem;
+        }
+
+        .project-main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="profilephoto">
+        <img src="photos/WhatsApp Image 2025-10-25 at 1.41.39 PM.jpeg" alt="Arpita" />
+      </div>
+      <nav>
+        <h1>Arpita Awasthi</h1>
+        <h2>Student at PW IOI LUCKNOW CAMPUS</h2>
+        <p>Curious learner exploring the world of web development — focused on building beautiful, functional, and accessible websites.</p>
+      </nav>
+    </header>
+    <main>
+      <div class="me">
+        <section class="card">
+          <h3 class="card-title"><span>About Me</span></h3>
+          <p>
+            Hi! I'm Arpita Awasthi, a dedicated Computer Science student at PW IOI Lucknow Campus. 
+            I'm passionate about front-end development and love crafting clean, responsive, and 
+            user-friendly websites using HTM and CSS. I enjoy learning new technologies 
+            and continuously improving my skills to build creative digital solutions that make a real impact.
+          </p>
+        </section>
+      </div>
+      <div class="skills">
+        <section class="card">
+          <h3 class="card-title"><span>Skills</span></h3>
+          <div class="skills-main">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">C</div>
+          </div>
+        </section>
+      </div>
+      <div class="projects">
+        <section class="card">
+          <h3 class="card-title"><span>Projects made</span></h3>
+          <div class="project-main">
+            <div class="project-items">
+              <a href="amazon homepage.html"><h4>Amazon Homepage</h4></a>
+              <div class="project-des">
+                <p>A responsive clone of Amazon's homepage built using HTML and CSS, focusing on layout design, navigation menus, and product section structuring.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day1HW.html"><h4>PW IOI Webpage</h4></a>
+              <div class="project-des">
+                <p>A static webpage representing the PW IOI campus — designed to practice structured layout, typography, and responsive design techniques.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day7.html"><h4>Shopper Homepage</h4></a>
+              <div class="project-des">
+                <p>An e-commerce landing page built with HTML and CSS, featuring organized product grids and a clean shopping interface.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day7hw.html"><h4>Netflix Homepage</h4></a>
+              <div class="project-des">
+                <p>A Netflix homepage clone that recreates the sleek dark UI and interactive sections using modern CSS layouts and hover effects.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day10 part3.html"><h4>HINDU Newspaper</h4></a>
+              <div class="project-des">
+                <p>A digital newspaper-style webpage mimicking *The Hindu*, demonstrating multi-column layouts, article formatting, and text hierarchy using HTML and CSS.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day12 part 2.html"><h4>Landkit landing page</h4></a>
+              <div class="project-des">
+                <p>A modern landing page inspired by Landkit’s design system, featuring responsive sections, call-to-action buttons, and a professional aesthetic.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day12hw.html"><h4>Shoes outlet</h4></a>
+              <div class="project-des">
+                <p>An e-commerce product showcase page for a shoe brand, highlighting visual hierarchy and use of CSS flexbox for clean product alignment.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="day17.html"><h4>Form</h4></a>
+              <div class="project-des">
+                <p>A functional and visually styled HTML form project that explores form validation, user input fields, and modern form design.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="fashionstore.html"><h4>Fashionstore</h4></a>
+              <div class="project-des">
+               <p>A fashion retail homepage built using semantic HTML and CSS grid, focusing on layout composition and elegant presentation of fashion items.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="homepage.html"><h4>AKS Shopping homepage</h4></a>
+              <div class="project-des">
+                <p>A homepage for a shopping brand, demonstrating responsive design principles and structured product sections with attention to color and typography.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="index2.html"><h4>Youtube</h4></a>
+              <div class="project-des">
+                <p>A static recreation of YouTube's interface built using HTML and CSS, focusing on layout grids, sidebar navigation, and video preview cards.</p>
+
+              </div>
+            </div>
+            <div class="project-items">
+              <a href="project1.html"><h4>AKS CLOTHES</h4></a>
+              <div class="project-des">
+               <p>An online clothing store page featuring product cards and category sections, designed with consistency and modern styling in mind.</p>
+ 
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="foot">
+        <section class="card">
+          <h3 class="card-title"><span> Get In Touch</span></h3>
+          <div class="mail">
+            <span>
+                <a href="mailto:awasthi.arpita11@gmail.com">awasthi.arpita11@gmail.com</a>
+            </span>
+          </div>
+          <div class="linkedin">
+            <span>
+                <a href="https://www.linkedin.com/in/arpita-awasthi-004665371">LinkedIn</a>
+            </span>
+          </div>
+          <div class="github">
+            <span>
+                <a href="https://github.com/arpitaawasthi03">GitHub</a>
+            </span>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
